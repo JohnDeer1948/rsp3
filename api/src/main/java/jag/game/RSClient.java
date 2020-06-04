@@ -1,6 +1,6 @@
 package jag.game;
 
-import org.rspeer.game.event.EventDispatcher;
+import org.rspeer.event.EventDispatcher;
 import org.rspeer.game.provider.callback.EventMediator;
 import jag.RSIntegerNode;
 import jag.RSLinkedList;
@@ -27,9 +27,9 @@ import java.util.Map;
 
 public interface RSClient extends RSGameEngine {
 
-    boolean isSceneRenderingEnabled();
+    boolean isSceneRenderingDisabled();
 
-    void setSceneRenderingEnabled(boolean enabled);
+    void setSceneRenderingDisabled(boolean enabled);
 
     void processDialogActionPacket(int componentUid, int subComponentIndex);
 

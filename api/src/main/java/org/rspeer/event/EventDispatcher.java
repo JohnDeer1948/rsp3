@@ -1,6 +1,6 @@
-package org.rspeer.game.event;
+package org.rspeer.event;
 
-import org.rspeer.game.event.listener.EventListener;
+import org.rspeer.event.listener.EventListener;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -17,7 +17,7 @@ public class EventDispatcher {
         listeners.remove(el);
     }
 
-    public void dispatch(Event e) {
+    public void dispatch(Event<?> e) {
         for (EventListener listener : listeners) {
             e.dispatch(listener);
         }
